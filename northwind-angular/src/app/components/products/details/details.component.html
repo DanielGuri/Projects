@@ -1,0 +1,13 @@
+<div>
+    <ng-container *ngIf="product">
+        <p>Name: {{product.name}}</p>
+        <br/>
+        <p>price: {{product.price | currency}}</p>
+        <br/>
+        <p>stock: {{product.stock}}</p>
+        <br/>
+        <img src="{{product.imageUrl}}"/>
+        <br/>
+    </ng-container>
+    <a routerLink="/products">Back</a>
+</div>

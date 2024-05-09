@@ -1,0 +1,12 @@
+<div>
+    <label [title]="tooltip">search:</label>
+    <!-- <label title="{{tooltip}}">search:</label> -->
+
+    <input type="search" [(ngModel)]="query"/>
+
+    <button (click)="search()">search</button>
+
+    <br/><br/>
+
+    <span>searching for {{query}}</span>
+</div>

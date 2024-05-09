@@ -1,0 +1,27 @@
+<div>
+    <!-- <p>We have total of {{products?.length}} products</p> -->
+    <p *ngIf="products">We have total of {{products.length}} products</p>
+
+    <!-- <p *ngFor="let p of products">{{p.name}}</p> -->
+    <!-- <table>
+        <thead>
+            <tr>
+                <th>name</th>
+                <th>price</th>
+                <th>stock</th>
+                <th>image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let p of products">
+                <th>{{p.name}}</th>
+                <th>{{p.price | currency:'USD'}}</th>
+                <th>{{p.stock}}</th>
+                <th><a routerLink="/products/{{p.id}}"><img src="{{p.imageUrl}}"/></a></th>
+            </tr>
+        </tbody>
+    </table> -->
+
+    <app-card *ngFor="let p of products" [product]="p"></app-card>
+
+</div>

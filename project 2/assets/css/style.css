@@ -1,0 +1,121 @@
+.card>img {
+    width: 32px;
+}
+
+#button-addon1{
+    width: 80px;
+}
+
+#logo {
+    width: 100px;
+    height: 100px;
+    margin-left: 80%;
+}
+
+h1 {
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    position: relative;
+}
+
+.card .form-check-input {
+    position: absolute;
+    top: 10px; 
+    right: 10px; 
+    width: 40px; 
+    height: 20px; 
+    margin: 0;
+    appearance: none;
+    cursor: pointer;
+    border-radius: 20px; 
+    outline: none;
+    background-color: #ccc; 
+    border: 2px solid #ccc; 
+    transition: background-color 0.3s, border-color 0.3s; 
+}
+
+.card .form-check-input:checked {
+    background-color: #4caf50; 
+    border-color: #4caf50; 
+}
+
+
+.card .form-check-input::before {
+    content: '';
+    position: absolute;
+    width: 18px; 
+    height: 18px; 
+    top: 50%;
+    left: 0px; 
+    transform: translate(0, -50%);
+    background-color: white; 
+    border-radius: 50%; 
+    transition: left 0.3s; 
+}
+
+.card .form-check-input:checked::before {
+    left: calc(100% - 22px); 
+}
+
+#myImage {
+    height: 450px;
+    margin-left: 150px;
+}
+
+#myTab {
+    border-top: 1px groove rgb(201, 201, 201); 
+    margin-top: 1px; 
+    margin-bottom: 0px; 
+}
+
+#search-input {
+    padding: 8px;
+    margin-right: 8px;
+    border-radius: 4px;
+    outline: none;
+}
+
+#search-button {
+    padding: 8px 12px;
+    background-color: #01fa4c;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#reset-search-button {
+    padding: 8px 12px;
+    margin-left: 0.4%;
+    background-color: #dc3545;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#search-button:hover, #reset-search-button:hover {
+    opacity: 0.8;
+}
+
+
+.container {
+    background-color: #ffffff;
+}
+
+body {
+    background-color: grey;
+    margin: 0;
+}
+
+.col-6 {
+    background-color: rgb(201, 201, 201);
+}
+
+#chartContainer {
+    margin-top: 20px; 
+}
+

@@ -1,0 +1,27 @@
+table {
+    margin: 20px auto;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+tr:nth-child(odd) {
+    background-color: lightblue;
+}
+
+tr:nth-child(even) {
+    background-color: darkblue;
+    color: white;
+}
+
+th > a > img {
+    width: 100px;
+}
+
+/* div {
+    display: flex;
+    flex-direction: column;
+} */
+

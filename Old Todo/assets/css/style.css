@@ -1,0 +1,138 @@
+body {
+background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+background-repeat: no-repeat;
+background-size: 100%;
+}
+
+.task_date {
+    
+    width: 20%;
+    background-color: white;
+    color:black;
+}
+
+.container {
+    position: absolute;
+    height: 35pc;
+    width: 40pc;
+    margin: auto;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 75px black;
+}
+
+.addTxt {
+    position: absolute;
+    height: 5px;
+    width: 80%;
+    margin: auto;
+    top: 25px;
+    right: 0;left: 0;
+    outline: none;
+    border: none;
+    padding: 20px;
+    padding-right: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.addBtn {
+    position: absolute;
+    width: 40px;
+    margin: auto;
+    top: 15px;
+    right: 35px;
+    cursor: pointer;
+    background: transparent;
+    outline: none;
+    border: 0;
+}
+
+.addBtn img {
+    position: absolute;
+    height: 40px;
+    margin: auto;
+    top: 30px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.list {
+    position: absolute;
+    height: 75%;
+    width: 100%;
+    margin: auto;
+    right: 0; left: 0; bottom: 0;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.list::-webkit-scrollbar{
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.element {
+    position: relative;
+    height: fit-content;
+    width: 70%;
+    right: 0%;
+    margin: 5px;
+    text-align:left;
+    transition: 0.2s;
+    padding: 5px;
+    background: white;
+    cursor: pointer;
+    padding-right: 80px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.element:hover{
+    transform: scale(1.1);
+}
+
+.tick{
+    position: absolute;
+    margin: auto;
+    height: 20px;
+    top: 0;
+    bottom: 0;
+    right: 50px;
+}
+
+.trash{
+    position: absolute;
+    margin: auto;
+    height: 30px;
+    top: 0;
+    bottom: 0;
+    right: 10px;
+    filter: grayscale(1);
+}
+
+.display-1 {
+    text-align: center;
+    margin-top: 75px;
+    color: rgb(255, 255, 255);
+    font-family: 'Rubik Microbe', cursive;
+}
+
+#addDate {
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    background: white;
+    border: 0.5px solid rgb(168, 0, 163);
+    margin: auto;
+}
+
+.task_date {
+    position: absolute;
+    top: 15%;
+    left: 40%;
+    right: 40%;
+    width: 23%;
+}

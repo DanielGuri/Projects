@@ -1,0 +1,39 @@
+body {
+    background-image: url("../img/rock-paper-scissors\ bg.jpg");
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+button{
+    cursor: pointer;
+}
+
+#P1 {
+color: rgb(9, 255, 0);
+}
+
+#Com1 {
+color: rgb(255, 0, 0)
+}
+
+#Res1 {
+    color: rgb(0, 0, 0);
+}
+
+.container {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    top: 30%;
+    right: 75px;
+    left: 0;
+    bottom: 0;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 65px black;
+    text-align: center;
+    padding-top: 55px;
+}
+
+#result {
+    color: rgb(255, 0, 140);
+}

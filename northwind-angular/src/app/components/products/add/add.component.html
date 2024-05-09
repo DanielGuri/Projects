@@ -1,0 +1,25 @@
+<div>
+    <form (submit)="submitForm(imageInput)" #addProductForm="ngForm">
+        <label>Name</label>
+        <input type="text" [(ngModel)]="product.name" name="name" required #nameInput="ngModel">
+        <span class="err" *ngIf="nameInput.errors?.['required'] && nameInput.touched">Name is a required field</span>
+        <br/>
+
+        <label>Price</label>
+        <input type="number" step="0.01" [(ngModel)]="product.price" name="price" required max="1000" #priceInput="ngModel">
+        <span class="err" *ngIf="priceInput.errors?.['required'] && priceInput.touched">Price is a required field</span>
+        <span class="err" *ngIf="priceInput.errors?.['max'] && priceInput.touched">Price must be lower than 1,000</span>
+        <br/>
+
+        <label>Stock</label>
+        <input type="number" [(ngModel)]="product.stock" name="stock" required max="1000">
+        <br/>
+
+        <label>Image</label>
+        <input type="file" accept="image/*" name="image" #imageInput required #imageValidation="ngModel" [(ngModel)]="product.image">
+        <span class="err" *ngIf="imageValidation.errors?.['required'] && imageValidation.dirty">You must add a product pic</span>
+        <br/>
+
+        <button [disabled]="addProductForm.invalid">Add Product</button>
+    </form>
+</div>

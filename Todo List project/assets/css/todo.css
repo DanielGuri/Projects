@@ -1,0 +1,106 @@
+body {
+  background-image: url(../images/tile.jpg);
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.form-container {
+  background-image: url(../images/formbg.jpg);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+#taskInput,
+#taskDate,
+#taskTime {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.task {
+  background-image: url(../images/notebg.png);
+  background-repeat: no-repeat;
+  margin: 0px 10px 10px 0px;
+  padding: 10px;
+  width: 190px; 
+  height: 240px; 
+  overflow: auto;
+  display: inline-block;
+  transition: opacity 0.3s ease;
+  position: relative;
+}
+
+.task::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 3px; 
+}
+
+.task::-webkit-scrollbar {
+  width: 3px;
+}
+
+.task::-webkit-scrollbar-thumb {
+  background-color: #888; 
+  border-radius: 3px; 
+  display: none;
+}
+
+.task p {
+  white-space: normal;
+  max-width: 240px;
+  padding-top: 15px;
+}
+
+.delete-btn {
+  display: none;
+  color: #d9534f;
+  cursor: pointer;
+  font-size: 20px;
+  position: absolute;
+  top: 17px;
+  left: 81%;
+}
+
+.task:hover .delete-btn {
+  display: block;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+h6 {
+  color: blue;
+  position: relative;
+  right: 5px;
+  top: 85px;
+}
+
+.form-control {
+ max-width: 50%;
+ text-align: center;
+ margin-left: 237.5px;
+}

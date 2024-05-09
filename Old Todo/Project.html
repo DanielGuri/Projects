@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="assets/css/jquery-ui.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery-validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+    <header>
+        <h1 class="display-1">Todo List</h1>
+    </header>
+    <div class="container">
+        <input type="text" class="addTxt" placeholder="Add Tasks..." required>
+        <div id="output" >
+            <p id="addDate"></p>
+    </div>
+        <input type="date" class="task_date" placeholder="Add Date..." required>
+        <button class="addBtn" onclick="addElement()">
+        <img src="https://picaflor-azul.com/images/plus-circle1.png">
+        </button>
+        <div class="list"></div>
+    </div>
+
+    <!-- Currect Date and time -->
+
+    <script>
+        var today = new Date();
+        
+        var time = today.getHours() + ":" +today.getMinutes();
+            
+        var date = today.getDate()+'/'+(today.getMonth()+1)+'/'+today.getFullYear();
+
+        // Selected Date and time
+
+        var dateTime = date+' '+time;
+        
+        document.getElementById("addDate").innerHTML = dateTime;
+        
+        config = {
+        enableTime: true,
+        dateFormat: "d-m-y H:i",
+        }
+        flatpickr(".task_date", config);
+
+
+
+    </script>
+</body>
+</html>

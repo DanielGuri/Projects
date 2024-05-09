@@ -1,0 +1,10 @@
+<div>
+
+    <app-search></app-search>    
+
+    <img *ngIf="img===1" src="/assets/images/products1.jpg"/>
+    <img *ngIf="img===2" src="/assets/images/products2.jpg"/>
+
+    <p *ngIf="isWeekend()">Only on weekends {{weekendDiscount}}% on all products</p>
+    <p *ngIf="!isWeekend()">Only on weekdays {{weekdayDiscount}}% on all products</p>
+</div>
