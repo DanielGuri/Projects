@@ -1,0 +1,37 @@
+div {
+    height: 100%;
+    padding: 0px;
+    margin: 20px;
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding: 10px;
+    height: auto;
+    width: 250px;
+    align-items: center;
+    border: 1px solid;
+    background-color: rgba(9, 187, 148, 0.14);
+}
+
+.error {
+    color: red;
+    font-weight: bolder;
+}
+
+input.ng-invalid.ng-touched {
+    background-color: pink;
+    border: 1px solid red;
+}
+
+select.ng-invalid.ng-touched {
+    background-color: pink;
+    border: 1px solid red;
+}

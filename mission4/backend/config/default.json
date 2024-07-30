@@ -1,0 +1,21 @@
+{
+    "app": {
+        "name": "company",
+        "port": 8080,
+        "protocol": "http",
+        "host": "localhost",
+        "secret": "company",
+        "jwt": {
+            "expires": "3h",
+            "secret": "company"
+        }
+    },
+    "mysql": {
+        "host": "localhost",
+        "user": "root",
+        "password": "",
+        "port": 3306,
+        "database": "company",
+        "connectionLimit": 10
+    }
+}

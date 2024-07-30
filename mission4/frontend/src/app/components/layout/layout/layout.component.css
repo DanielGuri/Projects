@@ -1,0 +1,20 @@
+div {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 10% 5% 85%;
+    grid-template-columns: repeat(6, 1fr);
+    box-sizing: border-box;
+}
+
+div > header, div > nav, div > main {
+    grid-column: span 6;
+}
+
+div > nav {
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+div > main {
+    overflow: auto;
+}

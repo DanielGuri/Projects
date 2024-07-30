@@ -1,0 +1,23 @@
+div {
+    margin: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+table, th, td {
+    border: 1px solid;
+    border-collapse: collapse;
+    background-color: rgba(9, 187, 148, 0.14);
+    padding: 5px;
+}
+
+th {
+    background-color: #dd352f;
+}
+
+h2 {
+    text-decoration: underline;
+}

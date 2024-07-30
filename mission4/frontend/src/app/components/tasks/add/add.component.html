@@ -1,0 +1,33 @@
+<div>
+    <h2>Add Task:</h2>
+    <form (submit)="submitForm()" #addTaskForm="ngForm" >
+
+        <label>Description:</label>
+        <input type="text" [(ngModel)]="task.description" name="description" #descriptionInput="ngModel" required minlength="2"/>
+        <span class="error" *ngIf="descriptionInput.errors?.['required'] && descriptionInput.touched" >Description is a required field</span>
+        <span class="error" *ngIf="descriptionInput.errors?.['minlength'] && descriptionInput.touched" >Description must be min 2 chars</span>
+        <br/>
+
+        <label>Date:</label>
+        <input type="date" [(ngModel)]="task.date" name="date" #dateInput="ngModel" required/>
+        <span class="error" *ngIf="dateInput.errors?.['required'] && dateInput.touched" >Date is a required field</span>
+        <br/>
+
+        <label>Client:</label>
+        <select [(ngModel)]="task.clientId" name="clientId" #clientIdInput="ngModel" required>
+            <option *ngFor="let c of clients" value="{{c.id}}" >{{c.name}}</option>
+        </select>
+        <span class="error" *ngIf="clientIdInput.errors?.['required'] && clientIdInput.touched">Client is a required field</span>
+        <br/>
+
+        <label>Completed?</label>
+        <select [(ngModel)]="task.completed" name="completed" #completedInput="ngModel" required>
+            <option value="true">true</option>
+            <option value="false">false</option>
+        </select>
+        <span class="error" *ngIf="completedInput.errors?.['required'] && completedInput.touched" >Completed is a required field</span>
+        <br/>
+
+        <button [disabled]="addTaskForm.invalid">Save</button>
+    </form>
+</div>

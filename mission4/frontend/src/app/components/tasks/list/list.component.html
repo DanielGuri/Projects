@@ -1,0 +1,27 @@
+<div>
+    <ng-container *ngIf="tasks">
+        <h2>Tasks:</h2>
+        <table>
+            <thead>
+                <th>Client</th>
+                <th>Date</th>
+                <th>Description</th>
+                <th>Completed?</th>
+                <th></th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let t of tasks">
+                    <td>{{t.clientName}}</td>
+                    <td>{{t.date | date}}</td>
+                    <td>{{t.description}}</td>
+                    <td>
+                        <input type="checkbox" *ngIf="t.completed" [checked]="true">
+                        <input type="checkbox" *ngIf="!t.completed" [checked]="false">
+                    </td>
+                    <td *ngIf="t.id"><button (click)="deleteTask(t.id)">Delete</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+    </ng-container>
+</div>

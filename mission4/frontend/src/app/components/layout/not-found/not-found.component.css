@@ -1,0 +1,12 @@
+div {
+    height: 100%;
+    display: flex;
+    /* center horizontally: */
+    justify-content: center; 
+    /* center vertically: */
+    align-items: center;
+}
+
+img {
+    width: auto;
+}
